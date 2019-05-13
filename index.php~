@@ -1,0 +1,37 @@
+<!--<?php 
+include('functions.php');
+$title = 'Welcome Praktykant';
+include('head.php') 
+?>
+<?php
+	if (isset($_POST['attempt'])) {
+		if (!check_value($_POST, 'username') || !check_value($_POST, 'password')) {
+			die('brak danych');
+		}
+		#$link=mysql_connect('192.168.122.203','praktykant','speednet') or die('Cant connect to database');
+		#mysql_select_db('Praktykant');
+		#$username=$_POST['username'];
+		#$password=sha1(mysql_real_escape_string($_POST['password']));
+		$user=$_POST['username'];
+		$pass=$_POST['password'];
+		$query = "SELECT username FROM PhpConnection	WHERE username='$user' AND password='$pass'";
+
+$result=mysql_query($query) or die (mysql_error());
+	$total=mysql_num_rows($result);
+	if($total>0) {
+
+		$_SESSION['username']='root';
+		header('Location:dashboard.php');
+	}
+	}
+?>
+		<form method="post" action="index.php">
+		<h2>LOGOWANIE</h2>
+		<br>	
+		Username<input type="text" name="username"/><br/>
+		Password<input type="password" name="password"><br/>
+		<input type="hidden" name="attempt"/>
+		<input type="submit" value="ZALOGUJ"/>
+		</form>
+    </body>
+</html>

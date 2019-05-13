@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head>
+        <title>Test Page for the Nginx HTTP Server on Fedora</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <style type="text/css">
+            /*<![CDATA[*/
+            body {
+                background-color:#c2e9fb ;
+                color: #000;
+                font-size: 0.9em;
+                font-family: sans-serif,helvetica;
+                margin: 0;
+                padding: 0;
+            }
+	    input{
+		margin:10px;		
+
+
+	}
+
+            h1 {
+                text-align: center;
+                margin: 0;
+                padding: 0.6em 2em 0.4em;
+                background-color: #BFD641;
+                color: #2A4B7C;
+                font-weight: normal;
+                font-size: 1.75em;
+		border-style:groove;
+		border-color:grey;
+            }
+            h1 strong {
+                font-weight: bold;
+                font-size: 1.5em;
+         	}
+        </style>
+    </head>
+
+    <body>
+        <h1><?php echo $title ?></h1>
