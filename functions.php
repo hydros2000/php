@@ -32,9 +32,11 @@ function check_value($array, $key){
 function query_count($link, $query)
 {
 mysqli_query($link,$query);
+return $link,$query;
 }
 
 function query_fetch_all($link, $query)
 {
-mysqli_fetch_field($query);
+mysqli_fetch_all(mysqli_result $result $query);
+return $link,$query;
 }
